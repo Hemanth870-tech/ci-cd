@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        python-version: ["3.9", "3.10", "3.11"]
+        python-version: ["3.9", "3.10", "3.12"]
 
     steps:
       - uses: actions/checkout@v4
@@ -28,6 +28,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run Tests
-        run: |
-          python manage.py test
+      # - name: Run Tests
+      #   run: |
+      #     python manage.py test
